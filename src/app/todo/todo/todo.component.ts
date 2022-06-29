@@ -20,8 +20,10 @@ export class TodoComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  validerChange(){
-
+  validerChange(title:string,content:string){
+    this.todo.title = title;
+    this.todo.content = content;
+    this.todoService.update(this.todo);
   }
 
   suppr(){

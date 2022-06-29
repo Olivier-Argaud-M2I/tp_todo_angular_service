@@ -27,4 +27,11 @@ export class TodoService {
     this._todos = this._todos.filter((to)=>to.id!==todo.id);
   }
 
+  update(todo:Todo){
+    this._todos.forEach((to)=>{
+      if(to.id===todo.id){
+        to = todo;
+      }
+    })
+  }
 }

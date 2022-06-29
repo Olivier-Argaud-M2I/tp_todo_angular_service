@@ -1,7 +1,7 @@
 <p>todo works!</p>
 <div>
-    <input type="text" placeholder="title" #title [value]="todo.title" (change)="validerChange()">
-    <textarea name="content" id="content" cols="30" rows="10" [value]="todo.content" #content (change)="validerChange()"></textarea>
+    <input type="text" placeholder="title" #title [value]="todo.title" (change)="validerChange(title.value,content.value)">
+    <textarea name="content" id="content" cols="30" rows="10" [value]="todo.content" #content (change)="validerChange(title.value,content.value)"></textarea>
     <input type="button" value="Supprimer" (click)="suppr()">
 </div>
 
